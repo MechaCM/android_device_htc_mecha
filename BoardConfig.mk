@@ -28,12 +28,6 @@ USE_CAMERA_STUB := true
 # inherit from common msm7x30
 -include device/htc/msm7x30-common/BoardConfigCommon.mk
 
-# inherit from the proprietary version
--include vendor/htc/mecha/BoardConfigVendor.mk
-
-# inherit bcmdhd config
--include device/htc/msm7x30-common/bcmdhd.mk
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mecha
 
@@ -41,7 +35,7 @@ TARGET_BOOTLOADER_BOARD_NAME := mecha
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=mecha no_console_suspend=1
 BOARD_KERNEL_BASE := 0x05000000
 BOARD_KERNEL_PAGE_SIZE := 4096
-TARGET_KERNEL_CONFIG := mecha_aosp_defconfig
+TARGET_KERNEL_CONFIG := mecha_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/mecha
 
 # Camera
@@ -62,8 +56,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 585101312
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1232072704
 BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
-
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
 
 # Recovery
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1

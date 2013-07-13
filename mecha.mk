@@ -42,9 +42,7 @@ PRODUCT_COPY_FILES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    lights.mecha \
     gps.mecha \
-    sensors.mecha
 
 # config xml file
 PRODUCT_COPY_FILES += \
@@ -87,9 +85,6 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/prebuilt/etc/dsp/HP_Video.csv:system/etc/HP_Video.csv \
     device/htc/mecha/prebuilt/etc/dsp/SPK_Combination.csv:system/etc/SPK_Combination.csv \
     device/htc/mecha/prebuilt/etc/dsp/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv
-
-# Wifi firmware
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
 PRODUCT_COPY_FILES += $(shell \
     find device/htc/mecha/prebuilt/etc/dsp/soundimage -name '*.txt' \
