@@ -33,7 +33,7 @@ TARGET_BOOTLOADER_BOARD_NAME := mecha
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=mecha no_console_suspend=1
-BOARD_KERNEL_BASE := 0x05000000
+BOARD_KERNEL_BASE := 0x05200000
 BOARD_KERNEL_PAGE_SIZE := 4096
 TARGET_KERNEL_CONFIG := mecha_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/mecha
